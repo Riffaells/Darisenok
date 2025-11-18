@@ -1,0 +1,35 @@
+{
+    "Energy Bar": {
+        "display_name": "Энергетический батончик",
+        "description": "Питательный батончик. Даёт временный бафф скорости.",
+        "StackSize": 10,
+        "ItemCategory": "Consumable",
+        "rarity": "Common",
+        "usage_types": [
+            "Health"
+        ],
+        "heal_amount": 25,
+        "energy_amount": 40,
+        "buff_type": "speed",
+        "buff_duration": 30,
+        "consumable": true,
+        "Icon": "res://assets/Pixel_Mart/energy_bar.png"
+    },
+    "Frying Pan": {
+        "display_name": "Сковорода",
+        "description": "Тяжёлая чугунная сковорода. Мощные размашистые удары.",
+        "StackSize": 1,
+        "ItemCategory": "Weapon",
+        "rarity": "Common",
+        "usage_types": [
+            "Combat"
+        ],
+        "weapon_type": "melee",
+        "attack_type": "slash",
+        "damage": 15,
+        "range": 40,
+        "cooldown": 1.2,
+        "consumable": false,
+        "Icon": "res://assets/Pixel_Mart/frying pan.png"
+    }
+}

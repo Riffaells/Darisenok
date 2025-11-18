@@ -1,0 +1,150 @@
+[gd_scene load_steps=8 format=3 uid="uid://e0macn2bkirp"]
+
+[ext_resource type="Script" uid="uid://bkbx0hygo2br6" path="res://scripts/basic/inventory/inventory.gd" id="1_abcde"]
+[ext_resource type="PackedScene" uid="uid://bkras3jd3bp40" path="res://scenes/player/inventory/slot.tscn" id="3_klmno"]
+[ext_resource type="Texture2D" uid="uid://c0nqct5ro0gj3" path="res://assets/tinyRPG_manaSoulGUI_v_1_0/20250420manaSoul9SlicesA-Sheet.png" id="4_qjxi6"]
+[ext_resource type="FontFile" uid="uid://dd3r7i8nhx0kb" path="res://assets/fonts/PixelFont/PixelFont.ttf" id="6_qjxi6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7e5pr"]
+line_spacing = 1.0
+font = ExtResource("6_qjxi6")
+font_size = 18
+
+[sub_resource type="Theme" id="Theme_7e5pr"]
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_qjxi6"]
+line_spacing = 1.0
+font = ExtResource("6_qjxi6")
+shadow_size = 0
+
+[node name="Inventory" type="Node2D"]
+position = Vector2(204, 84)
+rotation = -3.40696e-05
+scale = Vector2(1.51, 1.51)
+script = ExtResource("1_abcde")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 338.0
+offset_top = -38.917976
+offset_right = 617.85706
+offset_bottom = 277.6144
+texture = ExtResource("4_qjxi6")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 274.0
+offset_bottom = 223.0
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 5
+
+[node name="Slot1" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot2" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot3" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot4" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot5" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot6" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot7" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot8" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot9" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot10" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot11" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot12" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot13" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot14" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot15" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot16" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot17" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot18" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot19" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="Slot20" parent="GridContainer" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="EquipSlots" type="VBoxContainer" parent="."]
+offset_left = 286.0
+offset_top = 11.0
+offset_right = 334.0
+offset_bottom = 163.0
+
+[node name="ShirtSlot" parent="EquipSlots" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="PantsSlot" parent="EquipSlots" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="ShoesSlot" parent="EquipSlots" instance=ExtResource("3_klmno")]
+layout_mode = 2
+
+[node name="ItemInfoPanel" type="VBoxContainer" parent="."]
+offset_left = 360.52582
+offset_top = 11.659683
+offset_right = 590.9238
+offset_bottom = 229.98503
+
+[node name="ItemNameLabel" type="Label" parent="ItemInfoPanel"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.31802, 0.31802, 0.31802, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 16
+label_settings = SubResource("LabelSettings_7e5pr")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ItemDescriptionLabel" type="Label" parent="ItemInfoPanel"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme = SubResource("Theme_7e5pr")
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 14
+label_settings = SubResource("LabelSettings_qjxi6")
+vertical_alignment = 1
+autowrap_mode = 2

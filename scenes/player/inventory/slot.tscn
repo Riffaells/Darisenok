@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkras3jd3bp40"]
+
+[ext_resource type="Script" uid="uid://cncp2q61r4e61" path="res://scripts/basic/items/slot.gd" id="1_abcde"]
+
+[node name="Slot" type="Panel"]
+clip_contents = true
+custom_minimum_size = Vector2(48, 48)
+script = ExtResource("1_abcde")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://6p2jbov0llpg"]
+
+[ext_resource type="Script" uid="uid://cokqq6o6h6ame" path="res://scripts/basic/dialogue/talking_amulet.gd" id="1_talking_amulet"]
+
+[node name="TalkingAmulet" type="Area2D"]
+script = ExtResource("1_talking_amulet")
+activation_distance = 80.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

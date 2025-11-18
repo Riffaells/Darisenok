@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=4 uid="uid://cqxvhqxvhqxvh"]
+
+[ext_resource type="Script" path="res://scripts/basic/dialogue/amulet_character.gd" id="1_amulet_character"]
+[ext_resource type="Texture2D" uid="uid://caia8h13bmn6y" path="res://assets/rpg cutie/16.png" id="2_amulet_texture"]
+
+[node name="AmuletCharacter" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -80.0
+offset_right = 60.0
+offset_bottom = -40.0
+grow_vertical = 0
+script = ExtResource("1_amulet_character")
+
+[node name="Sprite" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_amulet_texture")
+expand_mode = 1

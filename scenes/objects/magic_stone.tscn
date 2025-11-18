@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqxvhqxvhqxvh"]
+
+[ext_resource type="Script" uid="uid://4oies6gqrcu7" path="res://scripts/basic/objects/magic_stone.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://0gon3rq0q54g" path="res://assets/basic/map/environment/deco/rocks.png" id="2_huswb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ervhm"]
+atlas = ExtResource("2_huswb")
+region = Rect2(0, 16.712883, 16.900757, 15.287117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(43, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2"]
+size = Vector2(69, 69)
+
+[node name="MagicStone" type="StaticBody2D"]
+collision_mask = 0
+script = ExtResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.536743e-07, -1.000001)
+scale = Vector2(2.875, 2.7)
+texture = SubResource("AtlasTexture_ervhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(2.5, 0.5)
+shape = SubResource("RectangleShape2D_2")

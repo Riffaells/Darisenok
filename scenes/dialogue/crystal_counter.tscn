@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmt7pufj0n8ey"]
+
+[ext_resource type="Script" uid="uid://co60ufwuejmeq" path="res://scripts/basic/dialogue/crystal_counter.gd" id="1_crystal"]
+[ext_resource type="Texture2D" uid="uid://cvelo3fabwng0" path="res://assets/rpg cutie/17.png" id="2_fry6d"]
+[ext_resource type="FontFile" uid="uid://dd3r7i8nhx0kb" path="res://assets/fonts/PixelFont/PixelFont.ttf" id="3_kh6dl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5d03u"]
+font = ExtResource("3_kh6dl")
+
+[node name="CrystalCounter" type="Control"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -70.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_crystal")
+
+[node name="CrystalSprite" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
+offset_right = 4.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fry6d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ShardLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -74.0
+offset_top = 1.0
+offset_right = -96.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_5d03u")
+horizontal_alignment = 1
+vertical_alignment = 1

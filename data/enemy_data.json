@@ -1,0 +1,50 @@
+{
+  "enemy_types": {
+    "orc_warrior": {
+      "name": "Орк-воин",
+      "description": "Сильный ближний боец с топором",
+      "health": 60,
+      "damage": 20,
+      "walk_speed": 45,
+      "attack_speed": 1.5,
+      "attack_radius": 35,
+      "detection_range": 120,
+      "scene_path": "res://scenes/enemy/orc_warrior.tscn",
+      "sprite_color": [0.8, 0.4, 0.2, 1.0]
+    },
+    "zombie_dino": {
+      "name": "Зомби-дино",
+      "description": "Медленный но упорный зомби",
+      "health": 40,
+      "damage": 15,
+      "walk_speed": 35,
+      "attack_speed": 2.0,
+      "attack_radius": 30,
+      "detection_range": 100,
+      "scene_path": "res://scenes/enemy/zombie_dino.tscn",
+      "sprite_color": [0.6, 0.8, 0.4, 1.0]
+    }
+  },
+  "enemy_groups": {
+    "patrol": {
+      "description": "Обычный патруль",
+      "enemies": ["orc_warrior", "zombie_dino"],
+      "formation": "line"
+    },
+    "orc_squad": {
+      "description": "Отряд орков",
+      "enemies": ["orc_warrior", "orc_warrior"],
+      "formation": "circle"
+    },
+    "zombie_horde": {
+      "description": "Орда зомби",
+      "enemies": ["zombie_dino", "zombie_dino", "zombie_dino"],
+      "formation": "circle"
+    },
+    "mixed_force": {
+      "description": "Смешанные силы",
+      "enemies": ["orc_warrior", "zombie_dino", "zombie_dino", "orc_warrior"],
+      "formation": "square"
+    }
+  }
+}

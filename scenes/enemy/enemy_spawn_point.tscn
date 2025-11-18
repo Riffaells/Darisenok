@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://spawn_point_scene"]
+
+[ext_resource type="Script" path="res://scripts/basic/enemy/enemy_spawn_point.gd" id="1_spawn_point"]
+
+[node name="EnemySpawnPoint" type="Node2D"]
+script = ExtResource("1_spawn_point")
+enemy_type = "orc_warrior"
+auto_spawn = true
+respawn_time = 10.0
+max_spawns = 1

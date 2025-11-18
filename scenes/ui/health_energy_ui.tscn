@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://7f8q1ie8e2n4"]
+
+[ext_resource type="Script" path="res://scripts/basic/ui/health_energy_ui.gd" id="1_health_ui"]
+
+[node name="HealthEnergyUI" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -120.0
+offset_right = 220.0
+offset_bottom = -20.0
+grow_vertical = 0
+script = ExtResource("1_health_ui")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HealthIcon" type="Label" parent="VBoxContainer/HealthContainer"]
+layout_mode = 2
+text = "❤️"
+horizontal_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="VBoxContainer/HealthContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="VBoxContainer/HealthContainer"]
+layout_mode = 2
+text = "100/100"
+horizontal_alignment = 1
+
+[node name="EnergyContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="EnergyIcon" type="Label" parent="VBoxContainer/EnergyContainer"]
+layout_mode = 2
+text = "⚡"
+horizontal_alignment = 1
+
+[node name="EnergyBar" type="ProgressBar" parent="VBoxContainer/EnergyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+show_percentage = false
+
+[node name="EnergyLabel" type="Label" parent="VBoxContainer/EnergyContainer"]
+layout_mode = 2
+text = "100/100"
+horizontal_alignment = 1
+
+[node name="ManaContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ManaIcon" type="Label" parent="VBoxContainer/ManaContainer"]
+layout_mode = 2
+text = "🔮"
+horizontal_alignment = 1
+
+[node name="ManaBar" type="ProgressBar" parent="VBoxContainer/ManaContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 50.0
+value = 50.0
+show_percentage = false
+
+[node name="ManaLabel" type="Label" parent="VBoxContainer/ManaContainer"]
+layout_mode = 2
+text = "50/50"
+horizontal_alignment = 1
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

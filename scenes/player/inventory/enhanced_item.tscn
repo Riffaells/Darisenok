@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvnxm2y8qrpxs"]
+
+[ext_resource type="Script" uid="uid://bhrhk2eym6k1k" path="res://scripts/basic/items/enhanced_item.gd" id="1_enhanced"]
+[ext_resource type="Texture2D" uid="uid://cr87gegtocw6b" path="res://assets/basic/map/tilesets/exterior/forest_terrain.png" id="2_slot"]
+
+[node name="EnhancedItem" type="Node2D"]
+script = ExtResource("1_enhanced")
+
+[node name="ItemSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_slot")
+
+[node name="QuantityLabel" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 2

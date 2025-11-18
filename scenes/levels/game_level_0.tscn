@@ -1,0 +1,158 @@
+[gd_scene load_steps=14 format=3 uid="uid://cuqqh58fqae6y"]
+
+[ext_resource type="Script" uid="uid://wrur51pernr3" path="res://scripts/basic/ui/main_menu.gd" id="1_main_menu"]
+[ext_resource type="Texture2D" uid="uid://cuieuid8meiy0" path="res://assets/tinyRPG_manaSoulGUI_v_1_0/20250420manaSoul9SlicesF-Sheet.png" id="2_l6hyd"]
+[ext_resource type="FontFile" uid="uid://dd3r7i8nhx0kb" path="res://assets/fonts/PixelFont/PixelFont.ttf" id="3_725wg"]
+[ext_resource type="Texture2D" uid="uid://cy1m3g08w62wq" path="res://assets/tinyRPG_manaSoulGUI_v_1_0/20250420manaSoulHeaderB-Sheet.png" id="3_ahuif"]
+[ext_resource type="Texture2D" uid="uid://q5di8o8q5s6u" path="res://assets/tinyRPG_manaSoulGUI_v_1_0/20250420manaSoul9SlicesC-Sheet.png" id="4_button"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ahuif"]
+font = ExtResource("3_725wg")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_nvwpu"]
+font = ExtResource("3_725wg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0rhrt"]
+font = ExtResource("3_725wg")
+font_color = Color(0.11220614, 0.39707062, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_button_hover"]
+texture = ExtResource("4_button")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+modulate_color = Color(1.2, 1.2, 1.2, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_button_normal"]
+texture = ExtResource("4_button")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_button_pressed"]
+texture = ExtResource("4_button")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+modulate_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="Theme" id="Theme_button"]
+default_font = ExtResource("3_725wg")
+default_font_size = 24
+Button/styles/hover = SubResource("StyleBoxTexture_button_hover")
+Button/styles/normal = SubResource("StyleBoxTexture_button_normal")
+Button/styles/pressed = SubResource("StyleBoxTexture_button_pressed")
+
+[sub_resource type="Theme" id="Theme_725wg"]
+default_font = ExtResource("3_725wg")
+
+[node name="GameLevel0" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main_menu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -10.0
+offset_right = 1163.0
+offset_bottom = 638.0
+texture = ExtResource("2_l6hyd")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 158.0
+offset_top = -10.0
+offset_right = 995.0
+offset_bottom = 144.0
+texture = ExtResource("3_ahuif")
+
+[node name="ControlsHint" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -40.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "ENTER - начать игру
+ESC - выход"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="GameTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 46.0
+offset_right = 701.0
+offset_bottom = 78.0
+text = "ДАРЫСЕНОК"
+label_settings = SubResource("LabelSettings_ahuif")
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 85.0
+offset_right = 701.0
+offset_bottom = 108.0
+text = "Приключенческая игра"
+label_settings = SubResource("LabelSettings_nvwpu")
+horizontal_alignment = 1
+
+[node name="Subtitle2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 563.0
+offset_right = 783.0
+offset_bottom = 586.0
+text = "Кодовое название проекта Darysenok"
+label_settings = SubResource("LabelSettings_0rhrt")
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 228.0
+offset_right = 753.0
+offset_bottom = 337.0
+theme = SubResource("Theme_button")
+text = "НАЧАТЬ ИГРУ"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 563.0
+offset_right = 183.0
+offset_bottom = 594.0
+theme = SubResource("Theme_button")
+text = "ВЫХОД"
+
+[node name="GameInfo" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 0
+offset_left = 313.0
+offset_top = 379.0
+offset_right = 913.0
+offset_bottom = 499.0
+theme = SubResource("Theme_725wg")
+bbcode_enabled = true
+text = "[center]
+[i]Управление: WASD/Стрелки - движение
+Ctrl - бег, 
+Мышь - взаимодействие[/i]
+[/center]"
+fit_content = true

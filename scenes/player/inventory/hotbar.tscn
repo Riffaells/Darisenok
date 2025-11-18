@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6g2w3f7k4xkv"]
+
+[ext_resource type="Script" uid="uid://bnosavgfsjgh7" path="res://scripts/basic/inventory/hotbar.gd" id="1_abcde"]
+[ext_resource type="PackedScene" uid="uid://bkras3jd3bp40" path="res://scenes/player/inventory/slot.tscn" id="3_klmno"]
+[ext_resource type="PackedScene" path="res://scenes/dialogue/amulet_character.tscn" id="4_amulet"]
+
+[sub_resource type="SystemFont" id="SystemFont_hotbar"]
+subpixel_positioning = 0
+oversampling = 2.0
+
+[node name="Hotbar" type="Node2D" groups=["hotbar"]]
+texture_filter = 1
+position = Vector2(333, 581)
+script = ExtResource("1_abcde")
+
+[node name="HotbarSlots" type="HBoxContainer" parent="."]
+texture_filter = 1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 395.0
+offset_bottom = 45.0
+theme_override_constants/separation = 5
+
+[node name="Slot1" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Slot2" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Slot3" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Slot4" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Slot5" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Slot6" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Slot7" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Slot8" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Slot9" parent="HotbarSlots" instance=ExtResource("3_klmno")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="ActiveItemLabel" type="Label" parent="."]
+texture_filter = 1
+offset_left = 9.0
+offset_top = -39.0
+offset_right = 476.0
+offset_bottom = -13.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = SubResource("SystemFont_hotbar")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="AmuletCharacter" parent="." instance=ExtResource("4_amulet")]
+texture_filter = 1
+offset_left = -70.0
+offset_top = -5.0
+offset_right = -10.0
+offset_bottom = 55.0

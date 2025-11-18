@@ -1,0 +1,575 @@
+[gd_scene load_steps=16 format=3 uid="uid://c1g1xnod5s3gj"]
+
+[ext_resource type="Script" uid="uid://bv1ukkgtyknam" path="res://scripts/basic/ui/credits_scene.gd" id="1_credits"]
+[ext_resource type="Texture2D" uid="uid://cuieuid8meiy0" path="res://assets/tinyRPG_manaSoulGUI_v_1_0/20250420manaSoul9SlicesF-Sheet.png" id="2_l6hyd"]
+[ext_resource type="FontFile" uid="uid://dd3r7i8nhx0kb" path="res://assets/fonts/PixelFont/PixelFont.ttf" id="3_725wg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font = ExtResource("3_725wg")
+font_size = 56
+font_color = Color(1, 0.843137, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ew73"]
+font = ExtResource("3_725wg")
+font_size = 40
+font_color = Color(0.7717001, 0.9145648, 0.7746368, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xpfh5"]
+font = ExtResource("3_725wg")
+font_size = 28
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_veq3c"]
+font = ExtResource("3_725wg")
+font_size = 28
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_30jxe"]
+font = ExtResource("3_725wg")
+font_size = 56
+font_color = Color(0.5615398, 0.3822, 0.98, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0dyxm"]
+font = ExtResource("3_725wg")
+font_size = 50
+font_color = Color(0.7693905, 0.8862721, 0.7090459, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j1dto"]
+font = ExtResource("3_725wg")
+font_size = 32
+font_color = Color(1, 0.78, 0.78, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ff7sk"]
+font = ExtResource("3_725wg")
+font_size = 32
+font_color = Color(0.82399994, 0.78, 1, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hwabx"]
+font = ExtResource("3_725wg")
+font_size = 38
+font_color = Color(0.3, 1, 0.96500003, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ebqy"]
+font = ExtResource("3_725wg")
+font_size = 38
+font_color = Color(0.99570805, 0.83474076, 0.8770222, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3d8ej"]
+font = ExtResource("3_725wg")
+font_size = 32
+font_color = Color(0.58000004, 0.6919999, 1, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_controls"]
+font = ExtResource("3_725wg")
+font_color = Color(0.75, 0.75, 0.75, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="GameLevel3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_credits")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.15, 1)
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+modulate = Color(0.7, 0.7, 0.9, 0.8)
+layout_mode = 0
+offset_top = -10.0
+offset_right = 1163.0
+offset_bottom = 638.0
+texture = ExtResource("2_l6hyd")
+
+[node name="ScrollingCredits" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsContainer" type="Control" parent="ScrollingCredits"]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 6900.0
+
+[node name="Title" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 80.0
+offset_right = 1152.0
+offset_bottom = 136.0
+text = "ДАРЫСЕНОК
+
+    С Днём Рождения! 🎉"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="CreateGame" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 398.0
+offset_right = 1152.0
+offset_bottom = 459.0
+text = "ИГРА СОЗДАНА ДЛЯ"
+label_settings = SubResource("LabelSettings_0ew73")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 494.0
+offset_right = 1152.0
+offset_bottom = 555.0
+text = "Любимой сетры"
+label_settings = SubResource("LabelSettings_xpfh5")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 571.0
+offset_right = 1152.0
+offset_bottom = 632.0
+text = "Дашка"
+label_settings = SubResource("LabelSettings_xpfh5")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 658.0
+offset_right = 1152.0
+offset_bottom = 719.0
+text = "С Днем Рождения"
+label_settings = SubResource("LabelSettings_xpfh5")
+horizontal_alignment = 1
+
+[node name="CreateGame2" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 869.0
+offset_right = 1152.0
+offset_bottom = 930.0
+text = "СОЗДАТЕЛЬ ИГРЫ"
+label_settings = SubResource("LabelSettings_0ew73")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 960.0
+offset_right = 1152.0
+offset_bottom = 1021.0
+text = "Михаил Бондарчук"
+label_settings = SubResource("LabelSettings_veq3c")
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 1095.0
+offset_right = 1152.0
+offset_bottom = 1156.0
+text = "Также известный как"
+label_settings = SubResource("LabelSettings_veq3c")
+horizontal_alignment = 1
+
+[node name="Title2" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 1219.0
+offset_right = 1152.0
+offset_bottom = 1351.0
+text = "Riffaells"
+label_settings = SubResource("LabelSettings_30jxe")
+horizontal_alignment = 1
+
+[node name="CreateGame3" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 1535.0
+offset_right = 1184.0
+offset_bottom = 1596.0
+text = "ОЗВУЧИВАНИЕ ПЕРСОНАЖЕЙ"
+label_settings = SubResource("LabelSettings_0ew73")
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 1714.0
+offset_right = 1184.0
+offset_bottom = 1775.0
+text = "Также известны	й"
+label_settings = SubResource("LabelSettings_veq3c")
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 4512.0
+offset_right = 1205.0
+offset_bottom = 4573.0
+text = "Технические детали "
+label_settings = SubResource("LabelSettings_0dyxm")
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 3899.0
+offset_right = 1205.0
+offset_bottom = 3960.0
+text = "Рыцарь и Красный монстрик"
+label_settings = SubResource("LabelSettings_0dyxm")
+horizontal_alignment = 1
+
+[node name="Label13" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 3282.0
+offset_right = 1205.0
+offset_bottom = 3343.0
+text = "Тепло и мудрость рода"
+label_settings = SubResource("LabelSettings_0dyxm")
+horizontal_alignment = 1
+
+[node name="Label14" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 2663.0
+offset_right = 1205.0
+offset_bottom = 2724.0
+text = "Лучший брат вселенной"
+label_settings = SubResource("LabelSettings_0dyxm")
+horizontal_alignment = 1
+
+[node name="Label15" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 2090.0
+offset_right = 1205.0
+offset_bottom = 2151.0
+text = "Невероятные Родители"
+label_settings = SubResource("LabelSettings_0dyxm")
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 1653.0
+offset_right = 1184.0
+offset_bottom = 1714.0
+text = "Красный Амулет"
+label_settings = SubResource("LabelSettings_j1dto")
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 1775.0
+offset_right = 1184.0
+offset_bottom = 1836.0
+text = "Пурпурный Сампфир"
+label_settings = SubResource("LabelSettings_ff7sk")
+horizontal_alignment = 1
+
+[node name="Label16" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 3380.0
+offset_right = 1205.0
+offset_bottom = 3441.0
+text = "Баба Света и Деда Юра"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label17" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 3597.0
+offset_right = 1237.0
+offset_bottom = 3658.0
+text = "Светик и Мужчина Мечты"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label19" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 2384.0
+offset_right = 1205.0
+offset_bottom = 2445.0
+text = "Боря И Люся"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label20" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 2760.0
+offset_right = 1205.0
+offset_bottom = 2821.0
+text = "Михаил"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label21" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 2958.0
+offset_right = 1205.0
+offset_bottom = 3019.0
+text = "Мишка"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label18" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 2186.0
+offset_right = 1205.0
+offset_bottom = 2247.0
+text = "Борис И Людмила"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 1898.0
+offset_right = 1205.0
+offset_bottom = 1959.0
+text = "Акжан"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label27" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 6739.0
+offset_right = 1184.0
+offset_bottom = 6800.0
+text = "Спасибо за прохождение! "
+label_settings = SubResource("LabelSettings_5ebqy")
+horizontal_alignment = 1
+
+[node name="Label28" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 6598.0
+offset_right = 1184.0
+offset_bottom = 6659.0
+text = "❤️ Сделано с любовью! ❤️"
+label_settings = SubResource("LabelSettings_5ebqy")
+horizontal_alignment = 1
+
+[node name="Label26" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 4228.0
+offset_right = 1205.0
+offset_bottom = 4289.0
+text = "Машка и Тёмка"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label29" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 4009.0
+offset_right = 1205.0
+offset_bottom = 4070.0
+text = "Артём и Мария"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label31" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 4846.0
+offset_right = 1205.0
+offset_bottom = 4907.0
+text = "Godot Engine"
+label_settings = SubResource("LabelSettings_3d8ej")
+horizontal_alignment = 1
+
+[node name="Label31" type="Label" parent="ScrollingCredits/CreditsContainer/Label31"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 324.0
+offset_right = 1149.0
+offset_bottom = 385.0
+text = "Около 4-5 месяцев"
+label_settings = SubResource("LabelSettings_3d8ej")
+horizontal_alignment = 1
+
+[node name="Label22" type="Label" parent="ScrollingCredits/CreditsContainer/Label31"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 227.0
+offset_right = 1149.0
+offset_bottom = 288.0
+text = "Игра разрабатывалась"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label31" type="Label" parent="ScrollingCredits/CreditsContainer/Label31/Label22"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 513.0
+offset_right = 1149.0
+offset_bottom = 574.0
+text = "Около месяца"
+label_settings = SubResource("LabelSettings_3d8ej")
+horizontal_alignment = 1
+
+[node name="Label31" type="Label" parent="ScrollingCredits/CreditsContainer/Label31/Label22/Label31"]
+layout_mode = 0
+offset_left = -75.0
+offset_top = 519.0
+offset_right = 1047.0
+offset_bottom = 580.0
+text = "В последние дни велась очень 
+быстрая разработка игры
+Чтобы Успеть"
+label_settings = SubResource("LabelSettings_3d8ej")
+horizontal_alignment = 1
+
+[node name="Label31" type="Label" parent="ScrollingCredits/CreditsContainer/Label31/Label22/Label31/Label31"]
+layout_mode = 0
+offset_left = -62.0
+offset_top = 359.0
+offset_right = 1060.0
+offset_bottom = 461.0
+text = "Всяческия баги мешали разрабатывать быстрее
+Приходилось с ними договариваться, 
+чаям напоимть или уничтожить"
+label_settings = SubResource("LabelSettings_3d8ej")
+horizontal_alignment = 1
+
+[node name="Label22" type="Label" parent="ScrollingCredits/CreditsContainer/Label31/Label22/Label31"]
+layout_mode = 0
+offset_left = -107.0
+offset_top = 428.0
+offset_right = 1015.0
+offset_bottom = 489.0
+text = "Разработка Игры"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label22" type="Label" parent="ScrollingCredits/CreditsContainer/Label31/Label22/Label31/Label22"]
+layout_mode = 0
+offset_left = -30.0
+offset_top = 365.0
+offset_right = 1092.0
+offset_bottom = 426.0
+text = "Возникало много багов"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label22" type="Label" parent="ScrollingCredits/CreditsContainer/Label31/Label22"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 422.0
+offset_right = 1149.0
+offset_bottom = 483.0
+text = "Активная Разработка"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="Label30" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 4120.0
+offset_right = 1205.0
+offset_bottom = 4181.0
+text = "Также известные как"
+label_settings = SubResource("LabelSettings_veq3c")
+horizontal_alignment = 1
+
+[node name="Label25" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 3496.0
+offset_right = 1205.0
+offset_bottom = 3557.0
+text = "Также известные как"
+label_settings = SubResource("LabelSettings_veq3c")
+horizontal_alignment = 1
+
+[node name="Label24" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 2866.0
+offset_right = 1205.0
+offset_bottom = 2927.0
+text = "Также известный как"
+label_settings = SubResource("LabelSettings_veq3c")
+horizontal_alignment = 1
+
+[node name="Label23" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 2293.0
+offset_right = 1205.0
+offset_bottom = 2354.0
+text = "Также известные как"
+label_settings = SubResource("LabelSettings_veq3c")
+horizontal_alignment = 1
+
+[node name="Label22" type="Label" parent="ScrollingCredits/CreditsContainer"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 4735.0
+offset_right = 1205.0
+offset_bottom = 4796.0
+text = "Игра написанна на"
+label_settings = SubResource("LabelSettings_hwabx")
+horizontal_alignment = 1
+
+[node name="ControlsHint" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -93.0
+offset_right = 410.0
+offset_bottom = -33.0
+grow_vertical = 0
+text = "ПРОБЕЛ - ускорить прокрутку
+ENTER - начать заново
+ESC - выход"
+label_settings = SubResource("LabelSettings_controls")
+vertical_alignment = 2

@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://bavkvbg0nxa32"]
+
+[ext_resource type="Script" uid="uid://btpv8oppxrcbo" path="res://scripts/basic/inventory/ui_manager.gd" id="1_ui_manager"]
+[ext_resource type="PackedScene" uid="uid://e0macn2bkirp" path="res://scenes/player/inventory/inventory.tscn" id="2_fghij"]
+[ext_resource type="PackedScene" uid="uid://c6g2w3f7k4xkv" path="res://scenes/player/inventory/hotbar.tscn" id="3_klmno"]
+[ext_resource type="PackedScene" uid="uid://bmt7pufj0n8ey" path="res://scenes/dialogue/crystal_counter.tscn" id="4_crystal"]
+[ext_resource type="PackedScene" uid="uid://cqxvhqxvhqxvh" path="res://scenes/dialogue/amulet_character.tscn" id="5_amulet"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_health"]
+bg_color = Color(0.2, 0.8, 0.2, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_energy"]
+bg_color = Color(0.2, 0.6, 1, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="UIManager" type="CanvasLayer"]
+script = ExtResource("1_ui_manager")
+
+[node name="Inventory" parent="." instance=ExtResource("2_fghij")]
+visible = false
+
+[node name="Hotbar" parent="." instance=ExtResource("3_klmno")]
+
+[node name="CrystalCounter" parent="." instance=ExtResource("4_crystal")]
+
+
+[node name="HealthEnergyUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 320.0
+offset_bottom = 80.0
+
+[node name="HealthBar" type="ProgressBar" parent="HealthEnergyUI"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 10.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_health")
+value = 100.0
+show_percentage = false
+
+[node name="EnergyBar" type="ProgressBar" parent="HealthEnergyUI"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 17.0
+offset_right = 198.0
+offset_bottom = 30.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_energy")
+value = 100.0
+show_percentage = false
+
+[node name="DraggedItemDisplay" type="TextureRect" parent="."]
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5

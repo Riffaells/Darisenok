@@ -1,0 +1,231 @@
+[gd_scene load_steps=30 format=3 uid="uid://djbbtuu22b6my"]
+
+[ext_resource type="Script" uid="uid://cktw00vfisah3" path="res://scripts/basic/enemy/base_enemy.gd" id="1_enemy"]
+[ext_resource type="Texture2D" uid="uid://nhwpqwua5mxt" path="res://assets/SoldierOrc/Characters(100x100)/Orc/Orc/Orc-Attack01.png" id="2_7axad"]
+[ext_resource type="Texture2D" uid="uid://bt1vdjggp1wv3" path="res://assets/SoldierOrc/Characters(100x100)/Orc/Orc/Orc-Idle.png" id="2_ynfxd"]
+[ext_resource type="FontFile" uid="uid://dd3r7i8nhx0kb" path="res://assets/fonts/PixelFont/PixelFont.ttf" id="3_agfr4"]
+[ext_resource type="Texture2D" uid="uid://dnh7svxs1t76p" path="res://assets/SoldierOrc/Characters(100x100)/Orc/Orc/Orc-Walk.png" id="4_nn8rw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2ehe"]
+atlas = ExtResource("2_7axad")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3ohb"]
+atlas = ExtResource("2_7axad")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xkak"]
+atlas = ExtResource("2_7axad")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il2tb"]
+atlas = ExtResource("2_7axad")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejk0n"]
+atlas = ExtResource("2_7axad")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gth0s"]
+atlas = ExtResource("2_7axad")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kv2t"]
+atlas = ExtResource("2_ynfxd")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7axad"]
+atlas = ExtResource("2_ynfxd")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn8rw"]
+atlas = ExtResource("2_ynfxd")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qk4o3"]
+atlas = ExtResource("2_ynfxd")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e4mq"]
+atlas = ExtResource("2_ynfxd")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1sy2"]
+atlas = ExtResource("2_ynfxd")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7esld"]
+atlas = ExtResource("4_nn8rw")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esxt4"]
+atlas = ExtResource("4_nn8rw")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlxvi"]
+atlas = ExtResource("4_nn8rw")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtpok"]
+atlas = ExtResource("4_nn8rw")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4pwk"]
+atlas = ExtResource("4_nn8rw")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op4yc"]
+atlas = ExtResource("4_nn8rw")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3s0bi"]
+atlas = ExtResource("4_nn8rw")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nmvk"]
+atlas = ExtResource("4_nn8rw")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xgoc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2ehe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3ohb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xkak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il2tb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejk0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gth0s")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kv2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7axad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn8rw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qk4o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e4mq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1sy2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7esld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esxt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlxvi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtpok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4pwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op4yc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3s0bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nmvk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_enemy"]
+height = 22.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_a2ehe"]
+font = ExtResource("3_agfr4")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_e3ohb"]
+font = ExtResource("3_agfr4")
+font_size = 8
+
+[node name="OrcWarrior" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_enemy")
+max_health = 60.0
+attack_range = 20.0
+enemy_name = "Орк-воин"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -5)
+scale = Vector2(1.2075, 1.2075)
+sprite_frames = SubResource("SpriteFrames_3xgoc")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_enemy")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(1, 0.3, 0.3, 1)
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = -20.0
+max_value = 60.0
+value = 60.0
+show_percentage = false
+
+[node name="HealthText" type="Label" parent="."]
+offset_left = -30.0
+offset_top = -40.0
+offset_right = 30.0
+offset_bottom = -17.0
+text = "60/60"
+label_settings = SubResource("LabelSettings_a2ehe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = -37.0
+offset_top = -49.0
+offset_right = 41.0
+offset_bottom = -26.0
+text = "Орк-воин"
+label_settings = SubResource("LabelSettings_e3ohb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseArea" type="Area2D" parent="."]
+
+[node name="MouseCollision" type="CollisionShape2D" parent="MouseArea"]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_enemy")

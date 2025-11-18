@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b1hirkmmwoi8m"]
+
+[sub_resource type="SystemFont" id="SystemFont_title"]
+oversampling = 2.0
+
+[resource]
+Label/font_sizes/font_size = 16
+Label/fonts/font = SubResource("SystemFont_title")
