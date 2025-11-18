@@ -27,4 +27,9 @@ This is a 2D game developed with the Godot Engine as an unusual birthday present
     git clone https://github.com/your_username/Darysenok.git
     ```
 2.  **Open the project in Godot**
+    *   Launch the Godot Engine.
 3.  **Run the game**
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
