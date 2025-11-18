@@ -24,7 +24,7 @@ This is a 2D game developed with the Godot Engine as an unusual birthday present
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/your_username/Darysenok.git
+    git clone https://github.com/Riffaells/Darysenok.git
     ```
 2.  **Open the project in Godot**
     *   Launch the Godot Engine.

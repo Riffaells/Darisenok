@@ -24,7 +24,7 @@
 
 1.  **Клонируйте репозиторий:**
     ```sh
-    git clone https://github.com/your_username/Darysenok.git
+    git clone https://github.com/Riffaells/Darysenok.git
     ```
 2.  **Откройте проект в Godot**
 3.  **Запустите игру**
